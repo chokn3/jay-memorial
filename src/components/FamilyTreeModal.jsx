@@ -19,7 +19,7 @@ const siblingCouples = [
 ]
 
 const siblingsSolo = [
-  { name: 'Mhae Guevarra', relation: 'Sister', photo: '' },
+  { name: 'Mhae Guevarra', relation: 'Sister', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783574717/741248400_2130165387880787_746525086844101007_n_gpfur3.jpg' },
 ]
 
 const inLaws = [
@@ -51,7 +51,7 @@ const niecesNephews = [
   { name: 'Mark Jehan Guevarra', relation: 'Nephew', photo: '' },
   { name: 'Christler Mangawang', relation: 'Nephew', photo: '' },
   { name: 'Christine Mangawang', relation: 'Niece', photo: '' },
-  { name: 'Isabella Guevarra', relation: 'Niece', photo: '' },
+  { name: 'Isabella Guevarra', relation: 'Niece', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783574716/743117976_1410952430876620_3278505633905182692_n_gs0awu.jpg' },
 ]
 
 const extended = [{ name: 'Ninang', relation: 'Aunt / Godmother', photo: '' }]
