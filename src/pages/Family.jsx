@@ -2,6 +2,7 @@ import { useState } from 'react'
 import FamilyTreeModal from '../components/FamilyTreeModal'
 import Lightbox from '../components/Lightbox'
 import { optimizedUrl } from '../utils/cloudinary'
+import VideoModal from '../components/VideoModal'
 
 // Add all Cloudinary photo URLs involving Jay's family here — no grouping needed.
 const familyPhotos = [
@@ -164,6 +165,7 @@ export default function Family() {
   const [showTree, setShowTree] = useState(false)
   const [tab, setTab] = useState('family')
   const [lightbox, setLightbox] = useState(null)
+  const [activeVideo, setActiveVideo] = useState(null)
 
   const hasFamilyPhotos = familyPhotos.length > 0
 
@@ -259,13 +261,22 @@ export default function Family() {
             No videos added yet.
           </p>
         ) : (
-          <div className="space-y-4">
+          <div className="grid grid-cols-2 gap-2">
             {videos.map((url, i) => (
-              <div key={i} className="aspect-square rounded-xl overflow-hidden bg-ink">
-                <video controls className="w-full h-full object-cover">
-                  <source src={optimizedUrl(url, 'q_auto')} type="video/mp4" />
+              <button
+                key={i}
+                onClick={() => setActiveVideo(optimizedUrl(url, 'q_auto'))}
+                className="relative aspect-square rounded-xl overflow-hidden bg-ink"
+              >
+                <video className="w-full h-full object-cover" muted playsInline preload="metadata">
+                  <source src={`${optimizedUrl(url, 'q_auto')}#t=0.5`} type="video/mp4" />
                 </video>
-              </div>
+                <div className="absolute inset-0 flex items-center justify-center bg-ink/20">
+                  <div className="w-10 h-10 rounded-full bg-parchment/90 flex items-center justify-center">
+                    <span className="text-ink text-sm ml-0.5">▶</span>
+                  </div>
+                </div>
+              </button>
             ))}
           </div>
         )}
@@ -274,6 +285,7 @@ export default function Family() {
 
       {showTree && <FamilyTreeModal onClose={() => setShowTree(false)} />}
       {lightbox && <Lightbox src={optimizedUrl(lightbox)} alt="Family photo" onClose={() => setLightbox(null)} />}
+      {activeVideo && <VideoModal src={activeVideo} onClose={() => setActiveVideo(null)} />}
     </div>
   )
 }
