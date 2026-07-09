@@ -49,6 +49,29 @@ const familyPhotos = [
   'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570835/received_1102597783591428_oadkus.jpg',
   'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570834/FB_IMG_1624267769374_ybblac.jpg',
   'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570834/IMG_2959_sewmg2.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783571830/IMG20201231235245_r4or1m.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783571829/IMG20201229200500_rzbupi.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783571828/IMG_20160717_180932_tnz2ok.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783571827/IMG_20160318_035958_xsi7jq.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783571826/IMG20210306195438_zbwzqw.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783571825/IMG_20160626_181725_tsiin2.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783571825/IMG_20160512_194920_sz2xtq.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783571823/IMG_20160327_222242_uagsos.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783571823/IMG_20160327_220257_bpqjyk.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783571822/IMG_7541_b1lh9u.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783571821/IMG_7549_azs4yz.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783571820/IMG_20170514_203436_esatdu.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783571819/IMG_20160220_232833_j46ojf.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783571818/IMG_7543_zk5nmc.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783571818/IMG_7546_ey3le4.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783571816/IMG_7545_dlmdqc.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783571816/IMG_7548_j2vvnj.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783571815/IMG_7547_yqfwhl.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783571814/IMG_7544_jxgj18.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783571814/IMG_7550_syxixq.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783571812/IMG_7542_mrrt1l.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783571812/IMG_7540_dm3rvl.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783571811/IMG_20180927_192051_jrgb7b.jpg',
   
 
 
@@ -56,7 +79,21 @@ const familyPhotos = [
 ]
 
 // Group photos with everyone together
-const everyonePhotos = []
+const everyonePhotos = [
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783572106/IMG_5457_jhpxkg.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783572134/dac4078b6f7f47d9529512ac34dbd946_f6gw1w.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783572086/2f1c196e42b20b3ecefc19d809aea389_jajxli.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783572085/74e314594ab05252ad53f559e289ce3e_mmkodq.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783572073/IMG_7414_xxcc31.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783572072/95e17b4a46f6791c63e2b87a760ffcc9_kcptzn.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783572071/adb1f40eceac1e4134efc0f45c7d84df_tgrraw.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783572070/186a2f586f891f6cea9fa0a716717cd6_nh56yv.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783572069/4e9c8d01bfbae9f39e44077af9037048_nqmpmm.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783572068/39f9b99b10f44ecacb34a7a425862169_bk9avz.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783572067/IMG_7547_jblbqc.jpg',
+
+
+]
 
 // Add Cloudinary video URLs here
 const videos = [
