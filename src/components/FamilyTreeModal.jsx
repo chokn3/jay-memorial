@@ -8,12 +8,18 @@ const siblingCouples = [
     { name: 'Lauro Guevarra', relation: 'Brother', photo: '' },
     { name: 'Racquel Parungao Guevarra', relation: "Lauro's Wife", photo: '' },
   ],
+  [
+    { name: 'Raquel Guevarra Mangawang', relation: 'Brother', photo: '' },
+    { name: 'Jeffrey Mangawang', relation: "Raquel's Husband", photo: '' },
+  ],
+  [
+    { name: 'Rosalie Guevarra Gonzales', relation: 'Sister', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783574109/738180536_1786291089197104_2235828631897387103_n_k1djwh.jpg' },
+    { name: 'Michael Gonzales', relation: "Rosalie's Husband", photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783574142/740953021_2815954462105138_340785814293270011_n_f1jhls.jpg' },
+  ],
 ]
 
 const siblingsSolo = [
   { name: 'Mhae Guevarra', relation: 'Sister', photo: '' },
-  { name: 'Raquel Guevarra Mangawang', relation: 'Sister', photo: '' },
-  { name: 'Rosalie Guevarra Gonzales', relation: 'Sister', photo: '' },
 ]
 
 const inLaws = [
