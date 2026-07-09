@@ -138,7 +138,13 @@ export default function FamilyTreeModal({ onClose }) {
               {siblingsSolo.slice(0, 2).map((p) => (
                 <Avatar key={p.name} {...p} size="sm" />
               ))}
-              <Avatar name="Jay Guevarra" relation="In Loving Memory" highlight size="sm" />
+              <Avatar
+                  name="Jay Guevarra"
+                  relation="In Loving Memory"
+                  photo="https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783575354/515491806_10224274807092839_6111844721753417517_n_txg8ta.jpg"
+                  highlight
+                  size="sm"
+                />
               {siblingsSolo.slice(2).map((p) => (
                 <Avatar key={p.name} {...p} size="sm" />
               ))}

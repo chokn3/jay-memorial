@@ -72,6 +72,8 @@ const familyPhotos = [
   'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783571812/IMG_7542_mrrt1l.jpg',
   'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783571812/IMG_7540_dm3rvl.jpg',
   'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783571811/IMG_20180927_192051_jrgb7b.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783575059/IMG_0529_f9rzmb.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783575057/IMG_0532_frxgj7.jpg',
   
 
 
@@ -91,6 +93,9 @@ const everyonePhotos = [
   'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783572069/4e9c8d01bfbae9f39e44077af9037048_nqmpmm.jpg',
   'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783572068/39f9b99b10f44ecacb34a7a425862169_bk9avz.jpg',
   'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783572067/IMG_7547_jblbqc.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783574865/IMG_20170901_134523_t4sozh.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783574863/IMG_20170901_134515_t67jef.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783574861/IMG_20170901_134529_p0j87i.jpg',
 
 
 ]
