@@ -9,7 +9,7 @@ const siblingCouples = [
     { name: 'Racquel Parungao Guevarra', relation: "Lauro's Wife", photo: '' },
   ],
   [
-    { name: 'Raquel Guevarra Mangawang', relation: 'Brother', photo: '' },
+    { name: 'Raquel Guevarra Mangawang', relation: 'Sister', photo: '' },
     { name: 'Jeffrey Mangawang', relation: "Raquel's Husband", photo: '' },
   ],
   [
@@ -143,11 +143,11 @@ export default function FamilyTreeModal({ onClose }) {
                 <Avatar key={p.name} {...p} size="sm" />
               ))}
             </div>
-            <div className="flex justify-center mt-3">
-              {siblingCouples.map((couple, i) => (
-                <Couple key={i} a={couple[0]} b={couple[1]} size="sm" />
-              ))}
-            </div>
+          <div className="flex flex-wrap justify-center gap-x-3 gap-y-4 mt-3">
+            {siblingCouples.map((couple, i) => (
+              <Couple key={i} a={couple[0]} b={couple[1]} size="sm" />
+            ))}
+          </div>
           </div>
 
           <Connector />
