@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { supabase } from '../supabaseClient'
 import PostCard from '../components/PostCard'
 import VisitorLogModal from '../components/VisitorLogModal'
+import PostComposer from '../components/PostComposer'
 
 function getDeviceId() {
   let id = localStorage.getItem('jay_memorial_device_id')
@@ -17,13 +18,6 @@ export default function Visitors() {
   const [likedPostIds, setLikedPostIds] = useState(new Set())
   const [loading, setLoading] = useState(true)
   const [showLog, setShowLog] = useState(false)
-
-  const [name, setName] = useState('')
-  const [caption, setCaption] = useState('')
-  const [file, setFile] = useState(null)
-  const [honeypot, setHoneypot] = useState('')
-  const [submitting, setSubmitting] = useState(false)
-  const [error, setError] = useState('')
 
   const deviceId = getDeviceId()
 
@@ -72,54 +66,6 @@ export default function Visitors() {
     }
   }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-
-    if (honeypot) return
-
-    if (!name.trim() || !file) {
-      setError('Please add your name and a photo before sharing.')
-      return
-    }
-
-    setSubmitting(true)
-    setError('')
-
-    try {
-      const formData = new FormData()
-      formData.append('file', file)
-      formData.append('upload_preset', import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET)
-
-      const uploadRes = await fetch(
-        `https://api.cloudinary.com/v1_1/${import.meta.env.VITE_CLOUDINARY_CLOUD_NAME}/image/upload`,
-        { method: 'POST', body: formData }
-      )
-      const uploadData = await uploadRes.json()
-
-      if (!uploadData.secure_url) throw new Error('Upload failed')
-
-      const { error: insertError } = await supabase.from('posts').insert([
-        {
-          name: name.trim(),
-          caption: caption.trim() || null,
-          image_url: uploadData.secure_url,
-        },
-      ])
-
-      if (insertError) throw insertError
-
-      setName('')
-      setCaption('')
-      setFile(null)
-      e.target.reset()
-      fetchPosts()
-    } catch (err) {
-      setError('Something went wrong sharing your photo. Please try again.')
-    } finally {
-      setSubmitting(false)
-    }
-  }
-
   return (
     <div className="px-6 py-10 max-w-lg mx-auto">
       <div className="flex items-center justify-between mb-6">
@@ -139,50 +85,7 @@ export default function Visitors() {
         Share a photo from your visit, and see moments from others who came to remember him too.
       </p>
 
-      {/* Composer */}
-      <form onSubmit={handleSubmit} className="bg-white/70 border border-mist rounded-2xl p-4 mb-8 space-y-3">
-        <input
-          type="text"
-          value={honeypot}
-          onChange={(e) => setHoneypot(e.target.value)}
-          tabIndex="-1"
-          autoComplete="off"
-          style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0 }}
-          aria-hidden="true"
-        />
-
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="Your name"
-          className="w-full rounded-lg px-3 py-2 bg-white border border-mist text-sm text-ink placeholder-ink/40 focus:outline-none focus:border-moss font-sans"
-        />
-        <textarea
-          value={caption}
-          onChange={(e) => setCaption(e.target.value)}
-          placeholder="Say a few words about your visit..."
-          rows={2}
-          className="w-full rounded-lg px-3 py-2 bg-white border border-mist text-sm text-ink placeholder-ink/40 focus:outline-none focus:border-moss font-sans resize-none"
-        />
-        <input
-          type="file"
-          accept="image/*"
-          capture="user"
-          onChange={(e) => setFile(e.target.files?.[0] || null)}
-          className="w-full text-sm font-sans text-ink/70 file:mr-3 file:py-2 file:px-3 file:rounded-lg file:border-0 file:bg-moss file:text-parchment file:text-sm"
-        />
-
-        {error && <p className="text-ember text-sm font-sans">{error}</p>}
-
-        <button
-          type="submit"
-          disabled={submitting}
-          className="w-full py-2.5 rounded-lg bg-ink text-parchment font-sans font-medium text-sm disabled:opacity-50"
-        >
-          {submitting ? 'Sharing...' : 'Share Your Visit'}
-        </button>
-      </form>
+      <PostComposer onPosted={fetchPosts} />
 
       {/* Feed */}
       {loading && <p className="text-center text-ink/50 font-sans text-sm">Loading memories...</p>}
