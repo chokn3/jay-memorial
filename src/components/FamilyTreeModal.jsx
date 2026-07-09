@@ -26,11 +26,11 @@ const wife = { name: 'Racquel Guevarra', relation: 'Wife', photo: '' }
 
 const childCouples = [
   [
-    { name: 'Jake Russel Guevarra', relation: 'Son', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783572906/437930592_1596816047837742_8903702812804996235_n_inzaaz.jpg' },
+    { name: 'Jake Russel Guevarra', relation: 'Son', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783573535/8a6bce4a-c68b-4c72-bf49-9b638974d3e5_ju81gf.jpg' },
     { name: 'Deanne Maxinne Paloma', relation: 'Future Daughter-in-Law', photo: '' },
   ],
   [
-    { name: 'Jacque Rachel Labaguis', relation: 'Daughter', photo: '' },
+    { name: 'Jacque Rachel Labaguis', relation: 'Daughter', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783573416/739155582_25416119411419189_2677299126708724050_n_eppk0b.jpg' },
     { name: 'Aaron Jeoffrey Labaguis', relation: 'Son-in-Law', photo: '' },
   ],
 ]
