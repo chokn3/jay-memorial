@@ -76,14 +76,21 @@ export default function Welcome() {
           <p className="text-ember text-sm mt-2 font-sans">{error}</p>
         )}
 
-        <button
-          type="submit"
-          disabled={submitting}
-          className="w-full mt-4 py-3 rounded-lg bg-moss text-parchment font-sans font-medium disabled:opacity-50"
-        >
-          {submitting ? 'Signing in...' : 'Enter'}
-        </button>
+      <button
+        type="submit"
+        disabled={submitting}
+        className="w-full mt-4 py-3 rounded-lg bg-moss text-parchment font-sans font-medium disabled:opacity-50"
+      >
+        {submitting ? 'Signing in...' : 'Enter'}
+      </button>
       </form>
+
+      <button
+        onClick={() => navigate('/about')}
+        className="mt-4 text-parchment/40 hover:text-parchment/70 font-sans text-xs transition-colors"
+      >
+        Just browsing? Continue without signing in
+      </button>
     </div>
   )
 }
