@@ -23,12 +23,12 @@ const siblingsSolo = [
 ]
 
 const inLaws = [
-  { name: 'Nelson Alfaro', relation: "Wife's Father", photo: '' },
+  { name: 'Nelson Alfaro', relation: "Wife's Father", photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783575541/741446731_2435549903589830_2654645851625961571_n_lnugiu.jpg' },
   { name: 'Michael Alfaro', relation: "Wife's Brother", photo: '' },
   { name: 'Mari Antonette Bacnagan', relation: "Wife's Sister", photo: '' },
 ]
 
-const wife = { name: 'Racquel Guevarra', relation: 'Wife', photo: '' }
+const wife = { name: 'Racquel Guevarra', relation: 'Wife', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783575543/742381619_1340282370945582_4356055692937520059_n_suyfnc.jpg' }
 
 const childCouples = [
   [
