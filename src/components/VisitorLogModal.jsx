@@ -31,33 +31,35 @@ export default function VisitorLogModal({ onClose }) {
     <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center">
       <div className="absolute inset-0 bg-ink/60" onClick={onClose} />
 
-      <div className="relative bg-parchment w-full sm:w-full sm:max-w-md max-h-[80vh] rounded-t-2xl sm:rounded-2xl p-6 overflow-y-auto animate-fade-in-up" style={{ animationFillMode: 'forwards' }}>
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="font-serif text-2xl text-ink">Visitor Log</h2>
-          <button onClick={onClose} className="text-ink/50 hover:text-ink text-sm font-sans">
-            Close
-          </button>
-        </div>
+    <div className="relative bg-parchment w-full sm:w-full sm:max-w-md max-h-[80vh] rounded-t-2xl sm:rounded-2xl flex flex-col animate-fade-in-up" style={{ animationFillMode: 'forwards' }}>
+    <div className="flex items-center justify-between px-6 py-5 border-b border-mist shrink-0">
+        <h2 className="font-serif text-2xl text-ink">Visitor Log</h2>
+        <button onClick={onClose} className="text-ink/50 hover:text-ink text-sm font-sans">
+        Close
+        </button>
+    </div>
 
+    <div className="overflow-y-auto px-6 py-4">
         {loading && <p className="text-center text-ink/50 font-sans text-sm">Loading visitors...</p>}
         {error && <p className="text-center text-ember font-sans text-sm">{error}</p>}
         {!loading && !error && visits.length === 0 && (
-          <p className="text-center text-ink/50 font-sans text-sm">No visitors yet.</p>
+        <p className="text-center text-ink/50 font-sans text-sm">No visitors yet.</p>
         )}
 
         {!loading && !error && visits.length > 0 && (
-          <ul className="space-y-3">
+        <ul className="space-y-3">
             {visits.map((visit) => (
-              <li key={visit.id} className="bg-white/60 border border-mist rounded-xl px-4 py-3 flex items-center justify-between">
+            <li key={visit.id} className="bg-white/60 border border-mist rounded-xl px-4 py-3 flex items-center justify-between">
                 <span className="font-serif text-ink text-lg">{visit.visitor_name}</span>
                 <span className="text-ink/50 font-sans text-xs whitespace-nowrap ml-4">
-                  {formatVisit(visit.visited_at)}
+                {formatVisit(visit.visited_at)}
                 </span>
-              </li>
+            </li>
             ))}
-          </ul>
+        </ul>
         )}
-      </div>
+    </div>
+    </div>
     </div>
   )
 }
