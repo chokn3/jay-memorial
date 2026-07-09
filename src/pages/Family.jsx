@@ -3,49 +3,74 @@ import FamilyTreeModal from '../components/FamilyTreeModal'
 import Lightbox from '../components/Lightbox'
 import { optimizedUrl } from '../utils/cloudinary'
 
-// Add your Cloudinary photo URLs here, grouped by who's in the photo.
-// Example: 'Wife': ['https://res.cloudinary.com/dgd7zzp5t/image/upload/v.../photo1.jpg']
-const familyPhotos = {
-  Wife: ['https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783566551/hnfjvvit5gaxycajxumf.jpg'],
-  Son: [],
-  Daughter: [],
-  'Son-in-Law': [],
-  Granddaughter: [],
-  'Future Daughter-in-Law': [],
-}
+// Add all Cloudinary photo URLs involving Jay's family here — no grouping needed.
+const familyPhotos = [
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783566551/hnfjvvit5gaxycajxumf.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570866/received_958276661372684_ph1zc6.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570865/received_153739736209665_ljegvv.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570864/FB_IMG_1628072182823_o5jvfd.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570863/f65afb649ebec2918594fba151caaea7_xynchy.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570862/ee2622856c7de28bf126b42ed6cf56c5_oondns.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570862/da0b1360325899578a29e065c03f6d0a_jo2pkr.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570861/e075c72fb8630cff180633016c07dd80_taekc3.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570860/ca215355469c4270a852b0abbfc154e9_i0unmg.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570860/c4fff55d6e49aadf23d2f49a5e9c476b_pujpvv.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570859/c3f13109e58ef2e5b6ab3d1291cb328d_zhyjub.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570858/c2ff5b6ea78e317780b33c2e4f169e2c_kpltxi.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570857/bd84e0f4188b3876ea0baafbc97fc99d_bm5yfm.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570856/bc7bb0c6060ba28e1aaf77938f2b17d8_txmkxs.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570856/bb4c4ecdb7347bacca2b96561890b99f_xdughn.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570855/ba3414c8eb49e604e5fa2a6ca49f85a4_fglxkl.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570854/b131570550ce394a1317bc0790b32ba8_ucesuh.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570853/b73c4ce501dfe2c33ac6048d165e97e1_citzwl.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570853/a19d6f719ecca88906b3b5638372a62f_btu2ag.jpg ',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570852/979fb630892d31e124e2229b1d169951_sn3f8q.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570851/2883fc601f67384d9e08a8c6dfe3f45d_aidthb.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570850/838d83114af549c398929bbdbee2f08a_rjlk2w.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570849/152adef97ccd27a2e0478c51eb584756_hjjbmq.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570848/85ec6b19ad3ccf648365248f5acb4359_xqbmsn.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570848/7e76a4d806b9cf3a1801882c0a6d8a15_ieiujb.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570847/76ff0733c29f399706f7a6707578e511_xmd0vt.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570846/6ce59eb09b029d8051f28a1c40bac13c_zxofdz.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570845/3eb765eeedaa58a919e8b65189da72fb_upwat1.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570844/36ff1fb7032b9326c3c1ea309e58464b_delzlv.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570844/51cee45ae397ce8bb7078e7df16dfa7d_bsgyid.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570843/4a5d6cb11e5a64953b898f84d116a3d1_ov9kzx.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570842/2c790c4557b6bb15543d06b10e7bcdc5_kg5q1d.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570841/1e24dde596c3f4287d524d3362b7e833_fnvj8w.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570840/0ff87370107901152665974811ad5ceb_vyrddp.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570840/IMG_7420_ehwwhf.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570840/IMG_7535_ksleap.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570838/IMG_7419_ossie4.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570837/IMG_7418_qelugx.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570836/IMG_7417_sa4ddv.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570835/IMG_7416_qb3n4j.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570835/IMG_3416_qi25gw.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570835/received_1102597783591428_oadkus.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570834/FB_IMG_1624267769374_ybblac.jpg',
+  'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783570834/IMG_2959_sewmg2.jpg',
+  
+
+
+
+]
 
 // Group photos with everyone together
 const everyonePhotos = []
 
 // Add Cloudinary video URLs here
-const videos = []
+const videos = [
+  'https://res.cloudinary.com/dgd7zzp5t/video/upload/v1778372910/SDE_Mama_and_Papa_Final_zsz5bo.mp4',
 
-function PhotoRow({ label, photos, onOpen }) {
-  if (photos.length === 0) return null
-  return (
-    <div className="mb-6">
-      <p className="font-sans text-sm font-medium text-ink/70 mb-2">{label}</p>
-      <div className="flex gap-2 overflow-x-auto pb-1">
-        {photos.map((url, i) => (
-          <button
-            key={i}
-            onClick={() => onOpen(url, label)}
-            className="shrink-0 w-24 h-24 rounded-xl overflow-hidden"
-          >
-            <img src={optimizedUrl(url, 'w_200,h_200,c_fill,q_auto,f_auto')} alt={label} className="w-full h-full object-cover" />
-          </button>
-        ))}
-      </div>
-    </div>
-  )
-}
+
+]
 
 export default function Family() {
   const [showTree, setShowTree] = useState(false)
   const [tab, setTab] = useState('family')
   const [lightbox, setLightbox] = useState(null)
 
-  const hasFamilyPhotos = Object.values(familyPhotos).some((arr) => arr.length > 0)
+  const hasFamilyPhotos = familyPhotos.length > 0
 
   return (
     <div className="px-6 py-10 max-w-lg mx-auto">
@@ -88,14 +113,23 @@ export default function Family() {
       {/* Family tab */}
       {tab === 'family' && (
         <div>
-          {!hasFamilyPhotos && (
+          {!hasFamilyPhotos ? (
             <p className="text-center text-ink/50 font-sans text-sm py-8">
               No family photos added yet.
             </p>
+          ) : (
+            <div className="grid grid-cols-2 gap-2">
+              {familyPhotos.map((url, i) => (
+                <button key={i} onClick={() => setLightbox(url)} className="aspect-square rounded-xl overflow-hidden">
+                  <img
+                    src={optimizedUrl(url, 'w_400,h_400,c_fill,q_auto,f_auto')}
+                    alt="Family photo"
+                    className="w-full h-full object-cover"
+                  />
+                </button>
+              ))}
+            </div>
           )}
-          {Object.entries(familyPhotos).map(([label, photos]) => (
-            <PhotoRow key={label} label={label} photos={photos} onOpen={(url) => setLightbox(url)} />
-          ))}
         </div>
       )}
 
