@@ -1,8 +1,18 @@
 const family = [
-  { name: 'Maria Dela Cruz', relation: 'Wife' },
-  { name: 'Jake Dela Cruz', relation: 'Son' },
-  { name: 'Anna Dela Cruz', relation: 'Daughter' },
-  { name: 'Placeholder Name', relation: 'Grandchild' },
+  { name: 'Racquel Guevarra', relation: 'Wife' },
+  { name: 'Jake Russel Guevarra', relation: 'Son' },
+  { name: 'Deanne Maxinne Paloma', relation: 'Future Daughter in Law' },
+  { name: 'Jacque Rachel Labaguis', relation: 'Daughter' },
+  { name: 'Aaron Jeoffrey Labaguis', relation: 'Son in Law' },
+  { name: 'Arianna Labaguis', relation: 'Grandchild' },
+
+  { name: 'Arsenia Guevarra', relation: 'Mother' },
+  { name: 'Avelino Guevarra', relation: 'Father' },
+  { name: 'Mhae Guevarra', relation: 'Sister' },
+  { name: 'Raquel Guevarra Mangawang', relation: 'Sister' },
+  { name: 'Rosalie Guevarra Gonzales', relation: 'Sister' },
+  { name: 'Lauro Guevarra', relation: 'Brother' },
+  { name: 'Ninang', relation: 'Aunt' },
 ]
 
 export default function Family() {
