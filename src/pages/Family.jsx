@@ -6,7 +6,7 @@ import { optimizedUrl } from '../utils/cloudinary'
 // Add your Cloudinary photo URLs here, grouped by who's in the photo.
 // Example: 'Wife': ['https://res.cloudinary.com/dgd7zzp5t/image/upload/v.../photo1.jpg']
 const familyPhotos = {
-  Wife: [],
+  Wife: ['https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783566551/hnfjvvit5gaxycajxumf.jpg'],
   Son: [],
   Daughter: [],
   'Son-in-Law': [],
