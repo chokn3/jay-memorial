@@ -1,51 +1,99 @@
 const parents = [
-  { name: 'Avelino Guevarra', relation: 'Father' },
-  { name: 'Arsenia Guevarra', relation: 'Mother' },
+  { name: 'Avelino Guevarra', relation: 'Father', photo: '' },
+  { name: 'Arsenia Guevarra', relation: 'Mother', photo: '' },
 ]
 
-const siblings = [
-  { name: 'Lauro Guevarra', relation: 'Brother' },
-  { name: 'Mhae Guevarra', relation: 'Sister' },
-  { name: 'Raquel Guevarra Mangawang', relation: 'Sister' },
-  { name: 'Rosalie Guevarra Gonzales', relation: 'Sister' },
+const siblingCouples = [
+  [
+    { name: 'Lauro Guevarra', relation: 'Brother', photo: '' },
+    { name: 'Racquel Parungao Guevarra', relation: "Lauro's Wife", photo: '' },
+  ],
 ]
 
-const wife = { name: 'Racquel Guevarra', relation: 'Wife' }
+const siblingsSolo = [
+  { name: 'Mhae Guevarra', relation: 'Sister', photo: '' },
+  { name: 'Raquel Guevarra Mangawang', relation: 'Sister', photo: '' },
+  { name: 'Rosalie Guevarra Gonzales', relation: 'Sister', photo: '' },
+]
+
+const inLaws = [
+  { name: 'Nelson Alfaro', relation: "Wife's Father", photo: '' },
+  { name: 'Michael Alfaro', relation: "Wife's Brother", photo: '' },
+  { name: 'Mari Antonette Bacnagan', relation: "Wife's Sister", photo: '' },
+]
+
+const wife = { name: 'Racquel Guevarra', relation: 'Wife', photo: '' }
 
 const childCouples = [
   [
-    { name: 'Jake Russel Guevarra', relation: 'Son' },
-    { name: 'Deanne Maxinne Paloma', relation: 'Future Daughter-in-Law' },
+    { name: 'Jake Russel Guevarra', relation: 'Son', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783572906/437930592_1596816047837742_8903702812804996235_n_inzaaz.jpg' },
+    { name: 'Deanne Maxinne Paloma', relation: 'Future Daughter-in-Law', photo: '' },
   ],
   [
-    { name: 'Jacque Rachel Labaguis', relation: 'Daughter' },
-    { name: 'Aaron Jeoffrey Labaguis', relation: 'Son-in-Law' },
+    { name: 'Jacque Rachel Labaguis', relation: 'Daughter', photo: '' },
+    { name: 'Aaron Jeoffrey Labaguis', relation: 'Son-in-Law', photo: '' },
   ],
 ]
 
-const grandchildren = [{ name: 'Ariana Labaguis', relation: 'Granddaughter' }]
+const grandchildren = [{ name: 'Ariana Labaguis', relation: 'Granddaughter', photo: '' }]
 
-const extended = [{ name: 'Ninang', relation: 'Aunt / Godmother' }]
+const niecesNephews = [
+  { name: 'Ezekiel Gonzales', relation: 'Nephew', photo: '' },
+  { name: 'Jasper Guevarra', relation: 'Nephew', photo: '' },
+  { name: 'Joshua Guevarra', relation: 'Nephew', photo: '' },
+  { name: 'Larah Mae Guevarra', relation: 'Niece', photo: '' },
+  { name: 'Mark Jehan Guevarra', relation: 'Nephew', photo: '' },
+  { name: 'Christler Mangawang', relation: 'Nephew', photo: '' },
+  { name: 'Christine Mangawang', relation: 'Niece', photo: '' },
+  { name: 'Isabella Guevarra', relation: 'Niece', photo: '' },
+]
 
-function Avatar({ name, relation, highlight }) {
+const extended = [{ name: 'Ninang', relation: 'Aunt / Godmother', photo: '' }]
+
+function Avatar({ name, relation, photo, highlight, size = 'md' }) {
   const initial = name.trim().charAt(0).toUpperCase()
+  const dims = size === 'sm' ? 'w-10 h-10' : 'w-12 h-12'
+  const width = size === 'sm' ? 'w-16' : 'w-[4.5rem]'
+
   return (
-    <div className="flex flex-col items-center text-center w-20">
+    <div className={`flex flex-col items-center text-center ${width}`}>
       <div
-        className={`w-14 h-14 rounded-full flex items-center justify-center font-serif text-lg mb-1 ${
-          highlight ? 'bg-ember text-ink ring-2 ring-ember ring-offset-2 ring-offset-parchment' : 'bg-moss text-parchment'
-        }`}
+        className={`${dims} rounded-full overflow-hidden flex items-center justify-center font-serif text-sm mb-1 shrink-0 ${
+          highlight ? 'ring-2 ring-ember ring-offset-2 ring-offset-parchment' : ''
+        } ${photo ? '' : highlight ? 'bg-ember text-ink' : 'bg-moss text-parchment'}`}
       >
-        {initial}
+        {photo ? (
+          <img src={photo} alt={name} className="w-full h-full object-cover" />
+        ) : (
+          initial
+        )}
       </div>
-      <p className="font-sans text-xs font-medium text-ink leading-tight">{name}</p>
-      <p className="font-sans text-[11px] text-ink/50">{relation}</p>
+      <p className="font-sans text-[10.5px] font-medium text-ink leading-tight">{name}</p>
+      <p className="font-sans text-[9.5px] text-ink/45 leading-tight">{relation}</p>
     </div>
   )
 }
 
+function SectionLabel({ children }) {
+  return (
+    <p className="text-center text-ink/40 font-sans text-[10px] uppercase tracking-wide mb-2.5">
+      {children}
+    </p>
+  )
+}
+
 function Connector() {
-  return <div className="w-px h-6 bg-mist mx-auto" />
+  return <div className="w-px h-4 bg-mist mx-auto" />
+}
+
+function Couple({ a, b, size }) {
+  return (
+    <div className="flex items-end justify-center gap-1.5">
+      <Avatar {...a} size={size} />
+      <span className="text-ember text-sm mb-4">&amp;</span>
+      <Avatar {...b} size={size} />
+    </div>
+  )
 }
 
 export default function FamilyTreeModal({ onClose }) {
@@ -57,76 +105,109 @@ export default function FamilyTreeModal({ onClose }) {
         className="relative bg-parchment w-full sm:max-w-md max-h-[85vh] rounded-t-2xl sm:rounded-2xl flex flex-col animate-fade-in-up"
         style={{ animationFillMode: 'forwards' }}
       >
-        <div className="flex items-center justify-between px-6 py-5 border-b border-mist shrink-0">
-          <h2 className="font-serif text-2xl text-ink">Family Tree</h2>
+        <div className="flex items-center justify-between px-5 py-4 border-b border-mist shrink-0">
+          <h2 className="font-serif text-xl text-ink">Family Tree</h2>
           <button onClick={onClose} className="text-ink/50 hover:text-ink text-sm font-sans">
             Close
           </button>
         </div>
 
-        <div className="overflow-y-auto px-6 py-6">
+        <div className="overflow-y-auto px-5 py-5 space-y-4">
           {/* Parents */}
-          <p className="text-center text-ink/40 font-sans text-xs uppercase tracking-wide mb-3">Parents</p>
-          <div className="flex justify-center gap-6">
-            {parents.map((p) => (
-              <Avatar key={p.name} {...p} />
-            ))}
+          <div>
+            <SectionLabel>Parents</SectionLabel>
+            <div className="flex justify-center gap-4">
+              {parents.map((p) => (
+                <Avatar key={p.name} {...p} size="sm" />
+              ))}
+            </div>
           </div>
 
           <Connector />
 
           {/* Jay's generation */}
-          <p className="text-center text-ink/40 font-sans text-xs uppercase tracking-wide mb-3">Jay's Generation</p>
-          <div className="flex flex-wrap justify-center gap-4 mb-2">
-            {siblings.slice(0, 2).map((p) => (
-              <Avatar key={p.name} {...p} />
-            ))}
-            <Avatar name="Jay Guevarra" relation="In Loving Memory" highlight />
-            {siblings.slice(2).map((p) => (
-              <Avatar key={p.name} {...p} />
-            ))}
+          <div>
+            <SectionLabel>Jay's Generation</SectionLabel>
+            <div className="flex flex-wrap justify-center gap-x-3 gap-y-3">
+              {siblingsSolo.slice(0, 2).map((p) => (
+                <Avatar key={p.name} {...p} size="sm" />
+              ))}
+              <Avatar name="Jay Guevarra" relation="In Loving Memory" highlight size="sm" />
+              {siblingsSolo.slice(2).map((p) => (
+                <Avatar key={p.name} {...p} size="sm" />
+              ))}
+            </div>
+            <div className="flex justify-center mt-3">
+              {siblingCouples.map((couple, i) => (
+                <Couple key={i} a={couple[0]} b={couple[1]} size="sm" />
+              ))}
+            </div>
+          </div>
+
+          <Connector />
+
+          {/* Wife's side / in-laws */}
+          <div>
+            <SectionLabel>Wife's Family</SectionLabel>
+            <div className="flex flex-wrap justify-center gap-x-3 gap-y-3">
+              {inLaws.map((p) => (
+                <Avatar key={p.name} {...p} size="sm" />
+              ))}
+            </div>
           </div>
 
           <Connector />
 
           {/* Wife */}
-          <p className="text-center text-ink/40 font-sans text-xs uppercase tracking-wide mb-3">Wife</p>
-          <div className="flex justify-center">
-            <Avatar {...wife} />
+          <div>
+            <SectionLabel>Wife</SectionLabel>
+            <div className="flex justify-center">
+              <Avatar {...wife} size="sm" />
+            </div>
           </div>
 
           <Connector />
 
           {/* Children */}
-          <p className="text-center text-ink/40 font-sans text-xs uppercase tracking-wide mb-3">
-            Children &amp; Their Families
-          </p>
-          <div className="flex flex-col gap-5 mb-2">
-            {childCouples.map((couple, i) => (
-              <div key={i} className="flex items-center justify-center gap-2">
-                <Avatar {...couple[0]} />
-                <span className="text-ember text-lg mb-6">&amp;</span>
-                <Avatar {...couple[1]} />
-              </div>
-            ))}
+          <div>
+            <SectionLabel>Children &amp; Their Families</SectionLabel>
+            <div className="flex flex-col gap-3">
+              {childCouples.map((couple, i) => (
+                <Couple key={i} a={couple[0]} b={couple[1]} size="sm" />
+              ))}
+            </div>
           </div>
 
           <Connector />
 
           {/* Grandchildren */}
-          <p className="text-center text-ink/40 font-sans text-xs uppercase tracking-wide mb-3">Grandchildren</p>
-          <div className="flex justify-center mb-6">
-            {grandchildren.map((p) => (
-              <Avatar key={p.name} {...p} />
-            ))}
+          <div>
+            <SectionLabel>Grandchildren</SectionLabel>
+            <div className="flex justify-center">
+              {grandchildren.map((p) => (
+                <Avatar key={p.name} {...p} size="sm" />
+              ))}
+            </div>
           </div>
 
-          {/* Extended family */}
+          <Connector />
+
+          {/* Nieces & Nephews */}
+          <div>
+            <SectionLabel>Nieces &amp; Nephews</SectionLabel>
+            <div className="grid grid-cols-4 gap-x-2 gap-y-3 justify-items-center">
+              {niecesNephews.map((p) => (
+                <Avatar key={p.name} {...p} size="sm" />
+              ))}
+            </div>
+          </div>
+
+          {/* Extended */}
           <div className="border-t border-mist pt-4">
-            <p className="text-center text-ink/40 font-sans text-xs uppercase tracking-wide mb-3">Extended Family</p>
+            <SectionLabel>Extended Family</SectionLabel>
             <div className="flex justify-center">
               {extended.map((p) => (
-                <Avatar key={p.name} {...p} />
+                <Avatar key={p.name} {...p} size="sm" />
               ))}
             </div>
           </div>
