@@ -251,24 +251,26 @@ export default function Family() {
         </div>
       )}
 
-      {/* Videos tab */}
-      {tab === 'videos' && (
-        <div>
-          {videos.length === 0 ? (
-            <p className="text-center text-ink/50 font-sans text-sm py-8">
-              No videos added yet.
-            </p>
-          ) : (
-            <div className="space-y-4">
-              {videos.map((url, i) => (
-                <video key={i} controls className="w-full rounded-xl">
+    {/* Videos tab */}
+    {tab === 'videos' && (
+      <div>
+        {videos.length === 0 ? (
+          <p className="text-center text-ink/50 font-sans text-sm py-8">
+            No videos added yet.
+          </p>
+        ) : (
+          <div className="space-y-4">
+            {videos.map((url, i) => (
+              <div key={i} className="aspect-square rounded-xl overflow-hidden bg-ink">
+                <video controls className="w-full h-full object-cover">
                   <source src={optimizedUrl(url, 'q_auto')} type="video/mp4" />
                 </video>
-              ))}
-            </div>
-          )}
-        </div>
-      )}
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    )}
 
       {showTree && <FamilyTreeModal onClose={() => setShowTree(false)} />}
       {lightbox && <Lightbox src={optimizedUrl(lightbox)} alt="Family photo" onClose={() => setLightbox(null)} />}
