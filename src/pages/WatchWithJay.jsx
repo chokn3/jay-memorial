@@ -6,6 +6,7 @@ const videos = [
   { title: 'Pepito Manaloto Episode 200', url: 'https://www.youtube.com/watch?v=M4-qQ4k8KNg&t=815s&pp=ygUgcGVwaXRvIG1hbmFsb3RvIGZ1bGwgZXBpc29kZSBvbGQ%3D' },
   { title: 'Pepito Manaloto Episode 205', url: 'https://www.youtube.com/watch?v=M_rimG2Z234&t=23s&pp=ygUgcGVwaXRvIG1hbmFsb3RvIGZ1bGwgZXBpc29kZSBvbGQ%3D' },
   { title: 'Pepito Manaloto Episode 283', url: 'https://www.youtube.com/watch?v=0o0YBBCKXZc&pp=ygUgcGVwaXRvIG1hbmFsb3RvIGZ1bGwgZXBpc29kZSBvbGQ%3D' },
+  { title: 'Pepito Manaloto Episode 344', url: 'https://www.youtube.com/watch?v=DyASMEo4uVM&pp=ygUgcGVwaXRvIG1hbmFsb3RvIGZ1bGwgZXBpc29kZSBvbGQ%3D' },
 ]
 
 export default function WatchWithJay() {
