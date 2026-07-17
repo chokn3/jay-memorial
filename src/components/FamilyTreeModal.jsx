@@ -17,10 +17,11 @@ const siblingCouples = [
     { name: 'Michael Gonzales', relation: "Rosalie's Husband", photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783574142/740953021_2815954462105138_340785814293270011_n_f1jhls.jpg' },
   ],
   [
-   { name: 'Mhae Guevarra', relation: 'Sister', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1784323470/741248400_2130165387880787_746525086844101007_n_gmyfnl.jpg' },
+    { name: 'Mhae Guevarra', relation: 'Sister', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1784323470/741248400_2130165387880787_746525086844101007_n_gmyfnl.jpg' },
     { name: 'Vboy Flojo', relation: "Mhae's Partner", photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1784323578/tito_vboy_ipdkkv.jpg' },
   ],
 ]
+
 
 const inLaws = [
   { name: 'Nelson Alfaro', relation: "Wife's Father", photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783575541/741446731_2435549903589830_2654645851625961571_n_lnugiu.jpg' },
@@ -134,21 +135,15 @@ export default function FamilyTreeModal({ onClose }) {
           {/* Jay's generation */}
           <div>
             <SectionLabel>Jay's Generation</SectionLabel>
-            <div className="flex flex-wrap justify-center gap-x-3 gap-y-3">
-              {siblingsSolo.slice(0, 2).map((p) => (
-                <Avatar key={p.name} {...p} size="sm" />
-              ))}
-              <Avatar
-                  name="Jay Guevarra"
-                  relation="In Loving Memory"
-                  photo="https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783575354/515491806_10224274807092839_6111844721753417517_n_txg8ta.jpg"
-                  highlight
-                  size="sm"
-                />
-              {siblingsSolo.slice(2).map((p) => (
-                <Avatar key={p.name} {...p} size="sm" />
-              ))}
-            </div>
+          <div className="flex justify-center">
+            <Avatar
+              name="Jay Guevarra"
+              relation="In Loving Memory"
+              photo="https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783575354/515491806_10224274807092839_6111844721753417517_n_txg8ta.jpg"
+              highlight
+              size="sm"
+            />
+          </div>
           <div className="flex flex-wrap justify-center gap-x-3 gap-y-4 mt-3">
             {siblingCouples.map((couple, i) => (
               <Couple key={i} a={couple[0]} b={couple[1]} size="sm" />
