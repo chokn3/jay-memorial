@@ -8,6 +8,7 @@ import Family from './pages/Family'
 import Visitors from './pages/Visitors'
 import Death from './pages/Death'
 import LeaveMessage from './pages/LeaveMessage'
+import Playlist from './pages/Playlist'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/visitors" element={<Visitors />} />
           <Route path="/death" element={<Death />} />
           <Route path="/message" element={<LeaveMessage />} />
+          <Route path="/playlist" element={<Playlist />} />
         </Route>
       </Routes>
     </BrowserRouter>

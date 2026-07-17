@@ -26,7 +26,7 @@ const siblingCouples = [
 const inLaws = [
   { name: 'Nelson Alfaro', relation: "Wife's Father", photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783575541/741446731_2435549903589830_2654645851625961571_n_lnugiu.jpg' },
   { name: 'Michael Alfaro', relation: "Wife's Brother", photo: '' },
-  { name: 'Mari Antonette Bacnagan', relation: "Wife's Sister", photo: '' },
+  { name: 'Mari Antonette Bacnagan', relation: "Wife's Sister", photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1784325068/mheanne_ldzlig.jpg' },
 ]
 
 const wife = { name: 'Racquel Guevarra', relation: 'Wife', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783575543/742381619_1340282370945582_4356055692937520059_n_suyfnc.jpg' }
@@ -38,24 +38,24 @@ const childCouples = [
   ],
   [
     { name: 'Jacque Rachel Labaguis', relation: 'Daughter', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783573416/739155582_25416119411419189_2677299126708724050_n_eppk0b.jpg' },
-    { name: 'Aaron Jeoffrey Labaguis', relation: 'Son-in-Law', photo: '' },
+    { name: 'Aaron Jeoffrey Labaguis', relation: 'Son-in-Law', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1784324805/aaron_ebuavb.jpg' },
   ],
 ]
 
-const grandchildren = [{ name: 'Ariana Labaguis', relation: 'Granddaughter', photo: '' }]
+const grandchildren = [{ name: 'Ariana Labaguis', relation: 'Granddaughter', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1784324257/ari_ylji98.jpg' }]
 
 const niecesNephews = [
-  { name: 'Ezekiel Gonzales', relation: 'Nephew', photo: '' },
-  { name: 'Jasper Guevarra', relation: 'Nephew', photo: '' },
-  { name: 'Joshua Guevarra', relation: 'Nephew', photo: '' },
-  { name: 'Larah Mae Guevarra', relation: 'Niece', photo: '' },
+  { name: 'Ezekiel Gonzales', relation: 'Nephew', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1784324709/kiel_fkiqsh.jpg' },
+  { name: 'Jasper Guevarra', relation: 'Nephew', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1784324706/rorok_wpc0t1.jpg' },
+  { name: 'Joshua Guevarra', relation: 'Nephew', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1784324705/koyang_akqyif.jpg' },
+  { name: 'Larah Mae Guevarra', relation: 'Niece', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1784324705/momay_zy9bky.jpg' },
   { name: 'Mark Jehan Guevarra', relation: 'Nephew', photo: '' },
-  { name: 'Christler Mangawang', relation: 'Nephew', photo: '' },
+  { name: 'Christler Mangawang', relation: 'Nephew', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1784324705/leleng_akaaon.jpg' },
   { name: 'Christine Mangawang', relation: 'Niece', photo: '' },
   { name: 'Isabella Guevarra', relation: 'Niece', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783574716/743117976_1410952430876620_3278505633905182692_n_gs0awu.jpg' },
 ]
 
-const extended = [{ name: 'Ninang', relation: 'Aunt / Godmother', photo: '' }]
+const extended = [{ name: 'Ninang', relation: 'Aunt / Godmother', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1784324342/ninang_ea3icx.jpg' }]
 
 function Avatar({ name, relation, photo, highlight, size = 'md' }) {
   const initial = name.trim().charAt(0).toUpperCase()

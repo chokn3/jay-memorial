@@ -6,8 +6,9 @@ const links = [
   { to: '/achievements', label: 'Life Achievements' },
   { to: '/family', label: 'Family' },
   { to: '/visitors', label: 'Visitors' },
-  { to: '/death', label: 'Death' },
+  { to: '/death', label: 'Passing' },
   { to: '/message', label: 'Leave a Message' },
+  { to: '/playlist', label: "Jay's Playlist" },
 ]
 
 export default function Layout() {

@@ -5,7 +5,7 @@ export default function Death() {
         <span className="w-2 h-2 rounded-full bg-ember inline-block animate-pulse mb-4" />
         <h1 className="font-serif text-3xl text-ink">In Peaceful Rest</h1>
         <p className="text-ink/60 font-sans text-sm mt-3">
-          Placeholder date of passing
+          June 25, 2026
         </p>
       </div>
 
@@ -14,12 +14,11 @@ export default function Death() {
         style={{ animationDelay: '150ms', animationFillMode: 'forwards' }}
       >
         <p>
-          Placeholder text about his final days, surrounded by loved ones,
-          written with whatever details feel right to share.
+          Jay passed away on June 25, 2026, surrounded by the love of his family.
         </p>
         <p>
-          He now rests at [placeholder location], a place his family visits
-          to remember and reflect.
+          He now rests at Mary Help Memorial Garden in Arayat, Pampanga, a place
+          his family and loved ones visit to remember and reflect.
         </p>
       </div>
     </div>

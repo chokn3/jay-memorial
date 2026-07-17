@@ -34,8 +34,7 @@ export default function About() {
         className="mt-8 border-l-2 border-ember pl-4 italic text-ink/70 font-serif text-lg opacity-0 animate-fade-in-up"
         style={{ animationDelay: '240ms', animationFillMode: 'forwards' }}
       >
-        "Placeholder for a quote Jay was known for, or a line that captured
-        who he was."
+        "Wag magtitipid sa pagkain."
       </blockquote>
     </div>
   )
