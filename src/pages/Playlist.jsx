@@ -9,6 +9,7 @@ const songs = [
   { title: 'G WOLF', artist: 'Flow G', url: 'https://res.cloudinary.com/dgd7zzp5t/video/upload/v1784326122/G_WOLF_-_FLOW_G_Official_Music_Video_b2e32y.mp3' },
   { title: 'Ibong Adarna', artist: 'Flow G & Gloc-9', url: 'https://res.cloudinary.com/dgd7zzp5t/video/upload/v1784326242/Flow_G_-_Ibong_Adarna_Ft._Gloc-9_Official_Music_Video_bqtunr.mp3' },
   { title: 'Bakit ngayon ka lang', artist: 'Juan Thugz n Harmony', url: 'https://res.cloudinary.com/dgd7zzp5t/video/upload/v1784326272/JuanThugs_n_Harmony_-_Bakit_Ngayon_Ka_Lang_Lyrics_LIVE_on_Wish_107.5_Bus_timlyrics_b0qfax.mp3' },
+  { title: 'Sa Susunod na lang', artist: 'Skusta Clee', url: 'https://res.cloudinary.com/dgd7zzp5t/video/upload/v1784326661/Sa_Susunod_Na_Lang_LYRIC_VIDEO_-_Skusta_Clee_ft._Yuri_Prod._by_Flip-D_nu8934.mp3' },
 ]
 
 function formatTime(seconds) {
