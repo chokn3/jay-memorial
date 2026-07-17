@@ -15,7 +15,7 @@ export default function WatchWithJay() {
         <span className="w-2 h-2 rounded-full bg-ember inline-block animate-pulse mb-3" />
         <h1 className="font-serif text-3xl text-ink">Watch with Jay</h1>
         <p className="text-ink/60 mt-2 font-sans text-sm max-w-xs mx-auto">
-          A few of his favorite videos — sit back and watch them the way he did.
+          A few of his favorite videos to watch when eating and chilling — sit back and watch them the way he did.
         </p>
       </div>
 

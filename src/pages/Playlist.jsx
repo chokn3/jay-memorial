@@ -79,7 +79,7 @@ export default function Playlist() {
         <span className="w-2 h-2 rounded-full bg-ember inline-block animate-pulse mb-3" />
         <h1 className="font-serif text-3xl text-ink">Jay's Playlist</h1>
         <p className="text-ink/60 mt-2 font-sans text-sm">
-          Songs he loved, kept here to listen to and remember him by.
+          Songs he loved listening to especially while driving, kept here to listen to and remember him by.
         </p>
       </div>
 
