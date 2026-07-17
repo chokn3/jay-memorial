@@ -5,10 +5,10 @@ const links = [
   { to: '/about', label: 'About Jay' },
   { to: '/achievements', label: 'Life Achievements' },
   { to: '/family', label: 'Family' },
-  { to: '/visitors', label: 'Visitors' },
+  { to: '/visitors', label: 'Visitors Lounge' },
   { to: '/death', label: 'Passing' },
-  { to: '/message', label: 'Leave a Message' },
   { to: '/playlist', label: "Jay's Playlist" },
+  { to: '/message', label: 'Leave a Message' },
 ]
 
 export default function Layout() {
