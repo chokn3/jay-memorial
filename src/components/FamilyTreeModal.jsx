@@ -16,10 +16,10 @@ const siblingCouples = [
     { name: 'Rosalie Guevarra Gonzales', relation: 'Sister', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783574109/738180536_1786291089197104_2235828631897387103_n_k1djwh.jpg' },
     { name: 'Michael Gonzales', relation: "Rosalie's Husband", photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783574142/740953021_2815954462105138_340785814293270011_n_f1jhls.jpg' },
   ],
-]
-
-const siblingsSolo = [
-  { name: 'Mhae Guevarra', relation: 'Sister', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783574717/741248400_2130165387880787_746525086844101007_n_gpfur3.jpg' },
+  [
+   { name: 'Mhae Guevarra', relation: 'Sister', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1784323470/741248400_2130165387880787_746525086844101007_n_gmyfnl.jpg' },
+    { name: 'Vboy Flojo', relation: "Mhae's Partner", photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1784323578/tito_vboy_ipdkkv.jpg' },
+  ],
 ]
 
 const inLaws = [
