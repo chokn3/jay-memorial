@@ -1,16 +1,16 @@
 const parents = [
-  { name: 'Avelino Guevarra', relation: 'Father', photo: '' },
-  { name: 'Arsenia Guevarra', relation: 'Mother', photo: '' },
+  { name: 'Avelino Guevarra', relation: 'Father', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1784323362/tatay_zcqt6a.jpg' },
+  { name: 'Arsenia Guevarra', relation: 'Mother', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1784323362/nanay_zt6fjc.jpg' },
 ]
 
 const siblingCouples = [
   [
-    { name: 'Lauro Guevarra', relation: 'Brother', photo: '' },
-    { name: 'Racquel Parungao Guevarra', relation: "Lauro's Wife", photo: '' },
+    { name: 'Lauro Guevarra', relation: 'Brother', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1784323341/dady_mzn6wu.jpg' },
+    { name: 'Racquel Parungao Guevarra', relation: "Lauro's Wife", photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1784323342/mamang_vbqung.jpg' },
   ],
   [
-    { name: 'Raquel Guevarra Mangawang', relation: 'Sister', photo: '' },
-    { name: 'Jeffrey Mangawang', relation: "Raquel's Husband", photo: '' },
+    { name: 'Raquel Guevarra Mangawang', relation: 'Sister', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1784323321/tita_raquel_mtzyxu.jpg' },
+    { name: 'Jeffrey Mangawang', relation: "Raquel's Husband", photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1784323308/tito_jeff_rh3izd.jpg' },
   ],
   [
     { name: 'Rosalie Guevarra Gonzales', relation: 'Sister', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783574109/738180536_1786291089197104_2235828631897387103_n_k1djwh.jpg' },
@@ -33,7 +33,7 @@ const wife = { name: 'Racquel Guevarra', relation: 'Wife', photo: 'https://res.c
 const childCouples = [
   [
     { name: 'Jake Russel Guevarra', relation: 'Son', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783573535/8a6bce4a-c68b-4c72-bf49-9b638974d3e5_ju81gf.jpg' },
-    { name: 'Deanne Maxinne Paloma', relation: 'Future Daughter-in-Law', photo: '' },
+    { name: 'Deanne Maxinne Paloma', relation: "Jake's Partner", photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1784323258/chin_fboumc.jpg' },
   ],
   [
     { name: 'Jacque Rachel Labaguis', relation: 'Daughter', photo: 'https://res.cloudinary.com/dgd7zzp5t/image/upload/v1783573416/739155582_25416119411419189_2677299126708724050_n_eppk0b.jpg' },
