@@ -40,7 +40,7 @@ export default function MessageComposer({ onPosted }) {
 
     const { error: insertError } = await supabase.from('messages').insert([
       {
-        name: isAnonymous ? 'Anonymous' : name.trim(),
+        name: isAnonymous ? 'Someone that loves you' : name.trim(),
         message: message.trim(),
       },
     ])
