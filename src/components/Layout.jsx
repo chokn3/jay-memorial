@@ -8,6 +8,7 @@ const links = [
   { to: '/visitors', label: 'Visitors Lounge' },
   { to: '/death', label: 'Passing' },
   { to: '/playlist', label: "Jay's Playlist" },
+  { to: '/watch', label: 'Watch with Jay' },
   { to: '/message', label: 'Leave a Message' },
 ]
 

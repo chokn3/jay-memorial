@@ -9,6 +9,7 @@ import Visitors from './pages/Visitors'
 import Death from './pages/Death'
 import LeaveMessage from './pages/LeaveMessage'
 import Playlist from './pages/Playlist'
+import WatchWithJay from './pages/WatchWithJay'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/death" element={<Death />} />
           <Route path="/message" element={<LeaveMessage />} />
           <Route path="/playlist" element={<Playlist />} />
+          <Route path="/watch" element={<WatchWithJay />} />
         </Route>
       </Routes>
     </BrowserRouter>
